@@ -1,13 +1,6 @@
 # house-price-prediction
 > house<-read.table("D:/price_prediction/house_price.csv",sep=",",header=TRUE)
 > head(house)
-       var1      var2 var3 var4 house_price
-1  76.70310  4.501219 2104    3      399900
-2  33.27988 16.467904 1600    3      329900
-3 360.22736  7.490818 2400    3      369000
-4 145.51345  1.796236 1416    2      232000
-5 151.11063  2.347204 3000    4      539900
-6 699.46430 10.863545 1985    4      299900
 > summary(house)
       var1             var2              var3           var4       house_price    
  Min.   :  0.00   Min.   : 0.3831   Min.   : 852   Min.   :1.00   Min.   :169900  
@@ -95,9 +88,6 @@ Number of Support Vectors:  42
 
 Non-linear Regression (earth method) to predict 
 > library(earth)
-Loading required package: plotmo
-Loading required package: plotrix
-Loading required package: TeachingDemos
 > nonlreg<-earth(house_price~var1+var2+var3+var4,house)
 > summary(nonlreg)
 Call: earth(formula=house_price~var1+var2+var3+var4, data=house)
